@@ -1,0 +1,130 @@
+@page
+@model razor.Pages.NetBind.IndexModel
+
+@{
+    ViewData["Title"] = "NetBind";
+}
+
+<h1>NetBind</h1>
+@if (User.IsInRole("Admin") || User.IsInRole("User") )
+{ 
+    <p>
+        <a asp-page="Create" class="btn btn-outline-success btn-sm">Create New</a>
+    </p>
+}
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <a asp-page="./Index" class="btn btn-outline-secondary">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NetworkSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                  
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Network)
+                /
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Network.Mask)
+                </a>                
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.VlanSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                  
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Vlan)
+                </a>                  
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.AllocatedIPSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                  
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Network.allocatedIP)
+                </a>                   
+            </th>            
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.VendorSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                 
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Vendor)
+                </a>                   
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                  
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].EnrollmentDate)
+                </a>                   
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.MngmntIPSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                 
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].networkMngmnt)
+                </a>                   
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.NetworkAssignment) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Network.network)
+            /
+            @Html.DisplayFor(modelItem => item.Network.Mask.mask)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vlan.vlan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Network.allocatedIP)
+        </td>            
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor.vendor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrollmentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.networkMngmnt)
+        </td>
+        @if (User.IsInRole("Admin") || User.IsInRole("User") )
+        {                                  
+            <td>
+            <a asp-page="./Details" asp-route-id="@item.NetworkAssignmentID" class="btn btn-outline-info btn-sm">Details</a>
+            <a asp-page="./Edit" asp-route-id="@item.NetworkAssignmentID" class="btn btn-outline-warning btn-sm">Edit</a>
+            <a asp-page="./Delete" asp-route-id="@item.NetworkAssignmentID" class="btn btn-outline-danger btn-sm">Delete</a>
+            </td>
+        }     
+        else
+        {
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.NetworkAssignmentID"class="btn btn-outline-info btn-sm">Details</a>
+            </td> 
+        } 
+    </tr>
+}
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.NetworkAssignment.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.NetworkAssignment.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.NetworkAssignment.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.NetworkAssignment.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

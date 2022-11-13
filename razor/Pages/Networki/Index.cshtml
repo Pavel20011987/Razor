@@ -1,0 +1,108 @@
+@page
+@model razor.Pages.Networki.IndexModel
+
+@{
+    ViewData["Title"] = "Networks";
+}
+
+<h1>Networks</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-outline-success btn-sm">Create New</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <a asp-page="./Index" class="btn btn-outline-secondary">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NetworkSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                               
+                @Html.DisplayNameFor(model => model.Networks[0].network)
+                /
+                @Html.DisplayNameFor(model => model.Networks[0].Mask)                
+
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.AllocatedIPSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                 
+                @Html.DisplayNameFor(model => model.Networks[0].allocatedIP)
+                </a>                
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NamodizmSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                    
+                @Html.DisplayNameFor(model => model.Networks[0].Nomadizm)
+                </a>                 
+            </th>  
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.InUseNetSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                  
+                @Html.DisplayNameFor(model => model.Networks[0].InUseNet)
+                </a>                 
+            </th>                                
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Networks) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.network)
+                /
+                @Html.DisplayFor(modelItem => item.Mask.mask)                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.allocatedIP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nomadizm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InUseNet)
+            </td>            
+                     
+               
+
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.NetworkID" class="btn btn-outline-info btn-sm">Details</a>               
+                <a asp-page="./Edit" asp-route-id="@item.NetworkID" class="btn btn-outline-warning btn-sm">Edit</a>
+                <a asp-page="./Delete" asp-route-id="@item.NetworkID" class="btn btn-outline-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Networks.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Networks.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Networks.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Networks.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

@@ -1,0 +1,191 @@
+08.08.2021 17:21:56 Add network 5.5.5.5/22 by admin@mgts.by
+08.08.2021 17:22:09 Add network 6.6.6.6/23 by admin@mgts.by
+08.08.2021 17:22:40 Delete network 5.5.5.5/22 by admin@mgts.by
+08.08.2021 17:41:52 Change network from / to 6.6.6.6/20 by admin@test.com
+08.08.2021 17:43:20 Change network from 6.6.6.6/20 to 6.6.6.6/22 by admin@test.com
+08.08.2021 18:30:48 Add NetBind 2.2.2.2/25, vlan1221, vendor "ZTE", mngIP 2.2.2.2 by admin@mgts.by
+08.08.2021 18:51:36 Delete NetBind 3.3.3.3/22, vlan1221, vendor "ZTE", mngIP 172.21.23.36 by admin@mgts.by
+08.08.2021 19:08:27 Delete NetBind 2.2.2.2/25, vlan1221, vendor "ZTE", mngIP  by admin@mgts.by
+08.08.2021 19:20:36 Add NetBind 2.2.2.2/25, vlan1221, vendor "ZTE", mngIP 4.4.4.4 by admin@mgts.by
+08.08.2021 19:20:59 Add NetBind 4.4.4.4/23, vlan1221, vendor "ZTE", mngIP 5.5.5.5 by admin@mgts.by
+08.08.2021 19:21:07 Delete NetBind 3.3.3.3/22, vlan1221, vendor "ZTE", mngIP 2.2.2.2 by admin@mgts.by
+08.08.2021 19:25:26 Change NetBind by admin@mgts.by
+	 OLD:6.6.6.6/22, vlan1221, vendor "ZTE", mngIP 5.5.5.5
+	 NEW:6.6.6.6/22, vlan1221, vendor "ZTE", mngIP 5.5.5.5
+08.08.2021 19:29:30 Delete NetBind 3.3.3.3/22, vlan1221, vendor "ZTE", mngIP 5.5.5.5 by admin@mgts.by
+08.08.2021 19:29:38 Change NetBind by admin@mgts.by
+	 OLD:2.2.2.2/25, vlan1221, vendor "ZTE", mngIP 4.4.4.4
+	 NEW:6.6.6.6/22, vlan1221, vendor "ZTE", mngIP 4.4.4.4
+08.08.2021 19:37:54 User:, Log In.
+08.08.2021 19:39:29 User:admin@mgts.by, Log In.
+08.08.2021 19:41:20 User:admin@mgts.by, Log In.
+08.08.2021 19:41:22 User:admin@mgts.by, Log In.
+08.08.2021 19:42:05 User:admin@mgts.by, Log In.
+08.08.2021 19:42:10 User:admin@mgts.by, Log Out.
+08.08.2021 19:51:56 User:admin@mgts.by, Log In.
+09.08.2021 18:40:09 User:admin@mgts.by, Log In.
+09.08.2021 18:54:37 User:admin@mgts.by, Log In.
+09.08.2021 19:01:10 User:admin@mgts.by, Log In.
+09.08.2021 19:45:02 User:admin@mgts.by, Log In.
+09.08.2021 20:12:30 User:admin@mgts.by, Log In.
+09.08.2021 20:17:48 User:admin@mgts.by, Log In.
+09.08.2021 20:26:11 User:admin@mgts.by, Log In.
+09.08.2021 20:37:43 User:admin@mgts.by, Log In.
+09.08.2021 20:38:52 User:admin@mgts.by, Log Out.
+09.08.2021 21:01:47 User:admin@mgts.by, Log In.
+10.08.2021 12:50:39 User:admin@mgts.by, Log In.
+10.08.2021 12:52:38 Add network 7.7.7.7/23 by admin@mgts.by
+10.08.2021 13:52:42 User:admin@mgts.by, Log In;
+10.08.2021 13:53:00 Add NetBind 2.2.2.2/25, vlan1221, vendor "ZTE", mngIP 172.21.23.140 by admin@mgts.by;
+10.08.2021 15:05:00 User:admin@mgts.by, Log In;
+10.08.2021 15:39:34 User:admin@mgts.by, Log In;
+10.08.2021 15:39:47 Add NetBind 3.3.3.3/22, vlan1222, vendor "ZTE", mngIP 172.21.23.46 by admin@mgts.by;
+10.08.2021 15:49:51 User:admin@mgts.by, Log In;
+10.08.2021 15:50:08 Add NetBind 4.4.4.4/23, vlan1223, vendor "ZTE", mngIP 172.21.23.44 by admin@mgts.by;
+10.08.2021 16:43:59 User:admin@mgts.by, Log In;
+10.08.2021 16:44:14 Add NetBind 7.7.7.7/23, vlan1221, vendor "ZTE", mngIP 172.21.23.46 by admin@mgts.by;
+10.08.2021 17:29:42 User:admin@mgts.by, Log In;
+10.08.2021 17:34:59 User:admin@mgts.by, Log In;
+10.08.2021 17:35:24 User:admin@mgts.by, Log Out;
+10.08.2021 17:35:30 User:user@mgts.by, Log In;
+10.08.2021 17:51:53 User:admin@mgts.by, Log In;
+10.08.2021 17:52:26 Add network 10.10.10.0/27 by admin@mgts.by;
+11.08.2021 17:43:21 User:admin@mgts.by, Log In;
+11.08.2021 17:54:02 User:admin@mgts.by, Log In;
+11.08.2021 18:10:44 User:admin@mgts.by, Log In;
+11.08.2021 18:16:14 User:admin@mgts.by, Log In;
+11.08.2021 18:23:35 User:admin@mgts.by, Log In;
+11.08.2021 18:30:03 User:admin@mgts.by, Log In;
+11.08.2021 18:32:48 Add NetBind 10.165.0.1/18, vlan1221, vendor "ZTE", mngIP 172.21.23.45 by admin@mgts.by;
+11.08.2021 19:26:48 User:admin@mgts.by, Log In;
+11.08.2021 19:41:47 User:admin@mgts.by, Log In;
+12.08.2021 05:36:00 User:admin@mgts.by, Log In;
+12.08.2021 15:31:35 User:admin@mgts.by, Log In;
+13.08.2021 15:05:05 User:user@mgts.by, Log In;
+13.08.2021 15:15:07 User:admin@mgts.by, Log In;
+13.08.2021 22:48:26 User:admin@mgts.by, Log In;
+13.08.2021 22:48:42 User:admin@mgts.by, Log Out;
+13.08.2021 22:52:24 User:admin@test.com, Log In;
+13.08.2021 23:02:42 User:user@mgts.by, Log In;
+13.08.2021 23:07:37 User:user@mgts.by, Log Out;
+13.08.2021 23:37:36 User:admin2@mgts.by, Log In;
+13.08.2021 23:38:33 User:admin2@mgts.by, Log Out;
+14.08.2021 09:59:43 User:admin@test.com, Log In;
+14.08.2021 10:02:20 Add network 1.1.1.1/21 by Admin@test.com;
+14.08.2021 10:19:45 User:admin@test.com, Log In;
+14.08.2021 10:26:44 User:admin@test.com, Log In;
+14.08.2021 10:27:25 Add NetBind 1.1.1.1/21, vlan1243, vendor "ZTE", mngIP 2.2.2.2 by Admin@test.com;
+14.08.2021 10:35:30 User:admin@test.com, Log In;
+14.08.2021 10:38:13 User:Admin@test.com, Log Out;
+14.08.2021 10:38:24 User:admin@mgts.by, Log In;
+14.08.2021 10:40:11 User:admin@mgts.by, Log Out;
+14.08.2021 10:55:52 User:admin@mgts.by, Log In;
+14.08.2021 10:57:33 Add network 1.1.1.1/22 by admin@mgts.by;
+14.08.2021 11:39:18 User:admin@mgts.by, Log In;
+14.08.2021 11:46:08 User:admin@mgts.by, Log In;
+14.08.2021 11:46:27 Add NetBind 1.1.1.1/22, vlan1245, vendor "ZTE", mngIP 1.11.11.1 by admin@mgts.by;
+14.08.2021 11:55:03 Add network 2.2.2.2/21 by admin@mgts.by;
+14.08.2021 11:57:34 Add network 3.3.3.3/16 by admin@mgts.by;
+14.08.2021 12:01:26 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/22, vlan1245, vendor "ZTE", mngIP 1.11.11.1
+	 NEW:2.2.2.2/21, vlan1245, vendor "ZTE", mngIP 1.11.11.1;
+14.08.2021 12:01:54 Delete network 1.1.1.1/22 by admin@mgts.by;
+14.08.2021 12:02:17 Add network 1.1.1.1/19 by admin@mgts.by;
+14.08.2021 12:07:37 User:admin@mgts.by, Log In;
+14.08.2021 12:20:33 User:admin@mgts.by, Log In;
+14.08.2021 12:31:29 User:admin@mgts.by, Log In;
+14.08.2021 12:31:47 Add NetBind 1.1.1.1/19, vlan1221, vendor "ZTE", mngIP 172.21.13.35 by admin@mgts.by;
+14.08.2021 12:33:05 Delete NetBind 2.2.2.2/21, vlan1245, vendor "ZTE", mngIP 1.11.11.1 by admin@mgts.by;
+14.08.2021 12:47:41 User:admin@mgts.by, Log In;
+14.08.2021 12:58:32 User:admin@mgts.by, Log In;
+14.08.2021 13:05:53 User:admin@mgts.by, Log In;
+14.08.2021 13:22:44 User:admin@mgts.by, Log In;
+14.08.2021 13:32:14 Add NetBind 2.2.2.2/21, vlan1243, vendor "ZTE", mngIP 172.21.14.10 by admin@mgts.by;
+14.08.2021 13:49:29 User:admin@mgts.by, Log In;
+14.08.2021 13:57:37 User:admin@mgts.by, Log In;
+14.08.2021 13:58:01 Add network 10.160.0.1/19 by admin@mgts.by;
+14.08.2021 13:58:55 Add NetBind 10.160.0.1/19, vlan1233, vendor "HUAWEI", mngIP 172.21.14.64 by admin@mgts.by;
+14.08.2021 14:08:09 User:admin@mgts.by, Log In;
+14.08.2021 14:31:08 User:admin@mgts.by, Log In;
+14.08.2021 14:37:41 Change network from 2.2.2.2/21 to 2.2.2.2/21 by admin@mgts.by;
+14.08.2021 14:41:17 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/19, vlan1221, vendor "ZTE", mngIP 172.21.13.35
+	 NEW:1.1.1.1/19, vlan1221, vendor "ZTE", mngIP 172.21.4.35;
+14.08.2021 14:47:05 User:admin@mgts.by, Log In;
+14.08.2021 14:47:25 Delete NetBind 1.1.1.1/19, vlan1221, vendor "ZTE", mngIP 172.21.4.35 by admin@mgts.by;
+14.08.2021 14:47:38 Add NetBind 1.1.1.1/19, vlan1245, vendor "ZTE", mngIP 172.21.4.44 by admin@mgts.by;
+14.08.2021 14:48:17 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/19, vlan1245, vendor "ZTE", mngIP 172.21.4.44
+	 NEW:1.1.1.1/19, vlan1242, vendor "ZTE", mngIP 172.21.4.44;
+14.08.2021 14:50:09 Add NetBind 3.3.3.3/16, vlan1245, vendor "HUAWEI", mngIP 172.21.3.33 by admin@mgts.by;
+14.08.2021 15:37:00 User:admin@mgts.by, Log In;
+14.08.2021 16:08:42 User:admin@mgts.by, Log In;
+14.08.2021 16:12:59 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/19, vlan1242, vendor "ZTE", mngIP 172.21.4.44
+	 NEW:1.1.1.1/19, vlan1244, vendor "ZTE", mngIP 172.21.4.44;
+14.08.2021 16:49:40 User:admin@test.com, Log In;
+14.08.2021 16:59:15 User:admin@mgts.by, Log In;
+14.08.2021 16:59:23 User:admin@mgts.by, Log Out;
+14.08.2021 16:59:29 User:user@mgts.by, Log In;
+14.08.2021 16:59:33 User:user@mgts.by, Log Out;
+14.08.2021 16:59:35 User:admin@mgts.by, Log In;
+14.08.2021 17:21:58 User:admin@mgts.by, Log In;
+14.08.2021 17:32:22 User:admin@mgts.by, Log In;
+14.08.2021 17:38:19 Add network 1.1.1.1/21 by admin@mgts.by;
+14.08.2021 17:39:06 Add NetBind 1.1.1.1/21, vlan1225, vendor "ZTE", mngIP 1.1.4.1 by admin@mgts.by;
+14.08.2021 17:39:15 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/21, vlan1225, vendor "ZTE", mngIP 1.1.4.1
+	 NEW:1.1.1.1/21, vlan1223, vendor "ZTE", mngIP 1.1.4.1;
+14.08.2021 19:17:13 User:admin@mgts.by, Log In;
+14.08.2021 19:22:26 User:admin@mgts.by, Log Out;
+14.08.2021 19:24:21 User:admin@mgts.by, Log In;
+14.08.2021 19:42:52 User:admin@mgts.by, Log In;
+14.08.2021 19:55:56 User:admin@mgts.by, Log In;
+14.08.2021 20:37:07 User:admin@mgts.by, Log In;
+15.08.2021 09:52:46 User:admin@mgts.by, Log In;
+15.08.2021 10:29:51 User:admin@mgts.by, Log In;
+15.08.2021 10:30:19 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/21, vlan1223, vendor "ZTE", mngIP 1.1.4.1
+	 NEW:1.1.1.1/21, vlan1221, vendor "ZTE", mngIP 1.1.4.1;
+15.08.2021 10:31:06 Delete NetBind 1.1.1.1/21, vlan1221, vendor "ZTE", mngIP 1.1.4.1 by admin@mgts.by;
+15.08.2021 10:31:24 Add NetBind 1.1.1.1/21, vlan1221, vendor "ZTE", mngIP 1.1.1.1 by admin@mgts.by;
+15.08.2021 10:31:33 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/21, vlan1221, vendor "ZTE", mngIP 1.1.1.1
+	 NEW:1.1.1.1/21, vlan1223, vendor "ZTE", mngIP 1.1.1.1;
+15.08.2021 10:38:10 User:admin@mgts.by, Log In;
+15.08.2021 10:38:23 Delete NetBind 1.1.1.1/21, vlan1223, vendor "ZTE", mngIP 1.1.1.1 by admin@mgts.by;
+15.08.2021 10:38:35 Add NetBind 1.1.1.1/21, vlan1221, vendor "ZTE", mngIP 1.1.1.1 by admin@mgts.by;
+15.08.2021 10:38:48 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/21, vlan1221, vendor "ZTE", mngIP 1.1.1.1
+	 NEW:1.1.1.1/21, vlan1224, vendor "ZTE", mngIP 1.1.1.1;
+15.08.2021 10:38:57 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/21, vlan1224, vendor "ZTE", mngIP 1.1.1.1
+	 NEW:10.160.224.1/19, vlan1224, vendor "ZTE", mngIP 1.1.1.1;
+15.08.2021 10:39:14 Change NetBind by admin@mgts.by
+	 OLD:10.160.224.1/19, vlan1224, vendor "ZTE", mngIP 1.1.1.1
+	 NEW:1.1.1.1/21, vlan1224, vendor "ZTE", mngIP 1.1.1.1;
+15.08.2021 10:45:01 User:admin@mgts.by, Log In;
+15.08.2021 11:00:31 User:admin@mgts.by, Log In;
+15.08.2021 11:28:19 User:admin@mgts.by, Log In;
+15.08.2021 11:40:26 User:admin@mgts.by, Log In;
+15.08.2021 12:01:39 User:admin@mgts.by, Log In;
+15.08.2021 12:07:24 User:admin@mgts.by, Log In;
+15.08.2021 12:21:08 User:admin@mgts.by, Log In;
+15.08.2021 12:38:12 User:admin@mgts.by, Log In;
+15.08.2021 12:41:33 Add network 2.2.2.2/20 by admin@mgts.by;
+15.08.2021 12:41:45 Add NetBind 2.2.2.2/20, vlan1223, vendor "ZTE", mngIP 2.2.4.2 by admin@mgts.by;
+15.08.2021 12:51:03 User:admin@mgts.by, Log In;
+15.08.2021 12:57:42 User:admin@mgts.by, Start Task Arp;
+15.08.2021 13:05:49 User:admin@mgts.by, Log In;
+15.08.2021 13:10:51 Change NetBind by admin@mgts.by
+	 OLD:1.1.1.1/21, vlan1224, vendor "ZTE", mngIP 1.1.1.1
+	 NEW:1.1.1.1/21, vlan1224, vendor "ZTE", mngIP 1.1.1.1;
+15.08.2021 13:11:24 Change NetBind by admin@mgts.by
+	 OLD:2.2.2.2/20, vlan1223, vendor "ZTE", mngIP 2.2.4.2
+	 NEW:2.2.2.2/20, vlan1228, vendor "ZTE", mngIP 2.2.4.2;
+15.08.2021 13:13:00 Delete NetBind 2.2.2.2/20, vlan1228, vendor "ZTE", mngIP 2.2.4.2 by admin@mgts.by;
+15.08.2021 13:13:14 Add NetBind 2.2.2.2/20, vlan1227, vendor "ZTE", mngIP 2.2.4.2 by admin@mgts.by;
+15.08.2021 13:14:41 Delete NetBind 1.1.1.1/21, vlan1224, vendor "ZTE", mngIP 1.1.1.1 by admin@mgts.by;
+15.08.2021 13:15:23 Add NetBind 1.1.1.1/21, vlan1221, vendor "HUAWEI", mngIP 1.1.1.1 by admin@mgts.by;
+15.08.2021 14:35:55 User:admin@mgts.by, Log In;
+03.09.2021 13:25:28 User:admin@mgts.by, Log In;

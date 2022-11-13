@@ -1,0 +1,134 @@
+@page
+@model razor.Pages.Report.IndexModel
+@using System.Text.RegularExpressions;
+
+@{
+    ViewData["Title"] = "Report";
+}
+
+<h1>Report</h1>
+<div>
+    <a asp-page="Tasks" value="Task Arp" class="btn btn-secondary">Task Arp</a>
+</div>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <a asp-page="./Index" class="btn btn-outline-secondary">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>       
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NetworkSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                              
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Network)
+                /
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Network.Mask)    
+                </a>          
+            </th>
+            <th>         
+                <a asp-page="./Index" asp-route-sortOrder="@Model.VlanSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                           
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Vlan)
+                </a>                 
+            </th>
+            <th>     
+                <a asp-page="./Index" asp-route-sortOrder="@Model.AllocatedIPSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                                             
+                @Html.DisplayNameFor(model => model.NetworkAssignment[0].Network.allocatedIP)
+                </a> 
+            </th>   
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ArpSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                  
+                IP InUse                
+                </a> 
+            </th>         
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.UtilizationIPSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                  
+                Utilization (%)    
+                </a>            
+            </th>   
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">                 
+                Collect time      
+                </a>          
+            </th>                                 
+        </tr>
+    </thead>
+    <tbody>
+@{
+    Regex regex = new Regex(@"^\d{1,5}$");
+    string utils="";
+} 
+@foreach (var item in Model.NetworkAssignment) {   
+    MatchCollection matches = regex.Matches(item.arp); 
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Network.network)
+            /
+            @Html.DisplayFor(modelItem => item.Network.Mask.mask)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vlan.vlan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Network.allocatedIP)
+        </td>
+        @{
+            if (matches.Count > 0)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.arp)
+                </td>
+            }
+            else
+            {
+                <td bgcolor="pink">
+                    @Html.DisplayFor(modelItem => item.arp)
+                </td>
+            }
+        }   
+        <td>
+            @{
+                if(!String.IsNullOrEmpty(item.arp))
+                {
+                    
+                    if (matches.Count > 0)
+                    {
+                        double arpUtil = (Convert.ToDouble(item.arp)/Convert.ToDouble(item.Network.allocatedIP))*100;
+                        arpUtil = Math.Round(arpUtil,2);
+                        utils = arpUtil.ToString();
+                    }
+                    else
+                    {	                    
+                        utils = "None";
+                    } 
+                }
+                else
+                {	                    
+                    utils = "None";
+                } 
+                    
+            }
+            @utils
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arpUpdate)
+        </td>   
+        <td>
+        <a asp-page="./Details" asp-route-id="@item.NetworkAssignmentID" class="btn btn-outline-info btn-sm">Details</a>
+        </td>                 
+    </tr>
+}
+    </tbody>
+</table>

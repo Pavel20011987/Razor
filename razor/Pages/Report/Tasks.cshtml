@@ -1,0 +1,17 @@
+@page
+@model razor.Pages.Report.TasksModel
+
+@{
+    ViewData["Title"] = "Task";
+}
+
+<h1>Task</h1>
+
+<h3>This process takes a long time to complete.</h3>
+<h3>Are you sure you want to start this?</h3>
+<div>    
+    <form method="post">
+        <input type="submit" value="Start" class="btn btn-danger" />
+        <a asp-page="./Index" class="btn btn-outline-secondary">Back to Report</a>
+    </form>
+</div>

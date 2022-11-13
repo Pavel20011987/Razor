@@ -1,0 +1,54 @@
+@page
+@model razor.Pages.Networki.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Network</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Network.NetworkID" class="control-label"></label>
+                <input asp-for="Network.NetworkID" class="form-control" />
+                <span asp-validation-for="Network.NetworkID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Network.network" class="control-label"></label>
+                <input asp-for="Network.network" class="form-control" />
+                <span asp-validation-for="Network.network" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Network.Mask" class="control-label"></label>
+                <select asp-for="Network.MaskID" class="form-control" asp-items="@Model.maskNameSL">
+                    <option value="">-- Select Mask --</option>
+                </select>
+                <span asp-validation-for="Network.MaskID" class="text-danger" />
+            </div>                 
+            <div class="form-group">
+                <label asp-for="Network.allocatedIP" class="control-label"></label>
+                <input asp-for="Network.allocatedIP" class="form-control" />
+                <span asp-validation-for="Network.allocatedIP" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Network.Nomadizm" /> @Html.DisplayNameFor(model => model.Network.Nomadizm)
+                </label>
+            </div>            
+       
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-page="Index" class="btn btn-outline-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

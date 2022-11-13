@@ -1,0 +1,37 @@
+@page
+@model razor.Pages.Networki.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Network</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Network.network)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Network.network)/@Html.DisplayFor(model => model.Network.Mask.mask)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Network.allocatedIP)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Network.allocatedIP)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Network.Nomadizm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Network.Nomadizm)
+        </dd>        
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Network.NetworkID" class="btn btn-outline-warning">Edit</a>
+    <a asp-page="./Index" class="btn btn-outline-secondary">Back to List</a>
+</div>

@@ -1,0 +1,64 @@
+@page
+@model razor.Pages.NetBind.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>NetworkAssignment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NetworkAssignment.NetworkAssignmentID" />
+            <div class="form-group">
+                <label asp-for="NetworkAssignment.NetworkID" class="control-label"></label>
+                <select asp-for="NetworkAssignment.NetworkID" class="form-control" asp-items="ViewBag.NetworkID"></select>
+                <span asp-validation-for="NetworkAssignment.NetworkID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NetworkAssignment.VlanID" class="control-label"></label>
+                <select asp-for="NetworkAssignment.VlanID" class="form-control" asp-items="ViewBag.VlanID"></select>
+                <span asp-validation-for="NetworkAssignment.VlanID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NetworkAssignment.VendorID" class="control-label"></label>
+                <select asp-for="NetworkAssignment.VendorID" class="form-control" asp-items="ViewBag.VendorID"></select>
+                <span asp-validation-for="NetworkAssignment.VendorID" class="text-danger"></span>
+            </div>
+            <!-- Старый код для выбора даты на странице редактирования -->
+<!--
+            <div class="form-group">
+                <label asp-for="NetworkAssignment.EnrollmentDate" class="control-label"></label>
+                <input asp-for="NetworkAssignment.EnrollmentDate" class="form-control" />
+                <span asp-validation-for="NetworkAssignment.EnrollmentDate" class="text-danger"></span>
+            </div>     -->
+            <div class="form-group">
+                <label asp-for="NetworkAssignment.networkMngmnt" class="control-label"></label>
+                <input asp-for="NetworkAssignment.networkMngmnt" class="form-control" />
+                <span asp-validation-for="NetworkAssignment.networkMngmnt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="NetworkAssignment.arp" class="form-control" />  
+                <input type="hidden" asp-for="NetworkAssignment.arpUpdate" class="form-control" />                                
+                <input type="hidden" value="@ViewData["NetwOld"]" name="NetwOld" />
+                <input type="hidden" value="@ViewData["MaskOld"]" name="MaskOld" />   
+                <input type="hidden" value="@ViewData["VlanOld"]" name="VlanOld" />
+                <input type="hidden" value="@ViewData["VendorOld"]" name="VendorOld" />
+                <input type="hidden" value="@ViewData["mngIPOld"]" name="mngIPOld" />    
+          
+                <input type="hidden" value="@ViewData["tempNetworkID"]" name="tempNetworkID" />                   
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-outline-secondary">Back to List</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

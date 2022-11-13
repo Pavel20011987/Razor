@@ -1,0 +1,83 @@
+@page
+@model razor.Pages.NetBind.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NetworkAssignment</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NetworkAssignment.Network)
+            /
+            @Html.DisplayNameFor(model => model.NetworkAssignment.Network.Mask)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NetworkAssignment.Network.network)
+            /
+            @Html.DisplayFor(model => model.NetworkAssignment.Network.Mask.mask)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NetworkAssignment.Vlan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NetworkAssignment.Vlan.vlan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NetworkAssignment.Vendor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NetworkAssignment.Vendor.vendor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NetworkAssignment.Network.Nomadizm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NetworkAssignment.Network.Nomadizm)
+        </dd>          
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NetworkAssignment.EnrollmentDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NetworkAssignment.EnrollmentDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NetworkAssignment.networkMngmnt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NetworkAssignment.networkMngmnt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NetworkAssignment.Network.allocatedIP)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NetworkAssignment.Network.allocatedIP)
+        </dd>        
+        <dt class="col-sm-2">
+            SSH             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </dt>
+        <dd class="col-sm-10">
+            @ViewData["SSH"]
+        </dd>
+
+              
+    </dl>
+</div>
+
+@if (User.IsInRole("Admin") || User.IsInRole("User") )
+{
+    <div>    
+        <a asp-page="./Edit" asp-route-id="@Model.NetworkAssignment.NetworkAssignmentID" class="btn btn-outline-warning">Edit</a>  
+        <a asp-page="./Index" class="btn btn-outline-secondary">Back to List</a>
+    </div>
+}
+else
+{
+    <div>     
+        <a asp-page="./Index" class="btn btn-outline-secondary">Back to List</a>
+    </div> 
+}
